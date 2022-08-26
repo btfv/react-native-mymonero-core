@@ -32,7 +32,7 @@ async function downloadSources(): Promise<void> {
   getZip(
     // The Emscripten SDK includes 1.75, but this older version still works:
     'boost_1_63_0.zip',
-    'https://dl.bintray.com/boostorg/release/1.63.0/source/boost_1_63_0.zip'
+    'https://boostorg.jfrog.io/artifactory/main/release/1.63.0/source/boost_1_63_0.zip'
   )
   getRepo(
     'monero-core-custom',
@@ -42,13 +42,13 @@ async function downloadSources(): Promise<void> {
   getRepo(
     // Use the webassembly-cleanup branch:
     'mymonero-core-cpp',
-    'https://github.com/mymonero/mymonero-core-cpp.git',
-    'dadb28f215ec7d6e52cc29ffa881a30542c64bc5'
+    'https://github.com/btfv/mymonero-core-cpp.git',
+    'dd8a6931125c474b7c4e6cb6e07e5d2b12c9d9ad'
   )
   getRepo(
     'mymonero-utils',
     'https://github.com/mymonero/mymonero-utils.git',
-    'f068bc339ccb5e74a01fba1c617b1b78a498241a'
+    '6d07183516c321236162e532970d83ac17670afc'
   )
   await disklet.setText(
     // Upstream mymonero-utils wrongly includes this file, so make a dummy:
